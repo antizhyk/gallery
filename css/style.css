@@ -22,6 +22,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 .gallery__list {
     display: flex;
@@ -59,4 +60,52 @@ li {
     left: 0;
     opacity: 0;
     visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+.show {
+    opacity: 1;
+}
+.modal__wrapp {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+    position: relative;
+}
+.modal__wrapp::before {
+    content: "";
+    width: 2px;
+    height: 35px;
+    background-color: #fff;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.modal__wrapp::after {
+    content: "";
+    width: 2px;
+    height: 35px;
+    background-color: #fff;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+.modal__content {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
 }
